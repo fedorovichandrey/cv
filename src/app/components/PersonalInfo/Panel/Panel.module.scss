@@ -1,0 +1,10 @@
+@import "../../../assets/styles/entry.scss";
+
+.panel {
+  display: flex;
+  align-items: center;
+}
+
+.s path {
+  transition: fill 0.5s ease-in-out;
+}

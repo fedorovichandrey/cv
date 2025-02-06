@@ -1,0 +1,69 @@
+@import "../../assets/styles/entry.scss";
+
+.title {
+  @include h2();
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.item {
+  @include text();
+  position: relative;
+  &:not(:first-child) {
+    margin-top: 20px;
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: var(--text-color);
+      transition: background-color 0.2s;
+      opacity: 0.1;
+      margin-bottom: 20px;
+    }
+  }
+  &:first-child {
+    margin-top: 20px;
+
+    @include max-vw($md) {
+      margin-top: 16px;
+    }
+  }
+}
+
+.projectTitle {
+  line-height: 150%;
+  @include h3(600);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-row-gap: 16px;
+  grid-column-gap: 40px;
+  margin-top: 20px;
+
+  @include max-vw($md) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 4px;
+    margin-top: 4px;
+  }
+}
+
+.key {
+  opacity: 0.6;
+
+  @include max-vw($md) {
+    @include h3(600);
+    margin-top: 12px;
+  }
+}
+
+.list {
+  li {
+    @include li();
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

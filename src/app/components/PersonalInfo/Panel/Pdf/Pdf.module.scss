@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/entry.scss";
+
+.wrap {
+  border: 0;
+  cursor: pointer;
+  color: #161616;
+  font-family: inherit;
+  border-radius: 20px;
+  padding: 6px 8px;
+  min-height: 26px;
+  background-color: $gray;
+  box-shadow: 0px 1px 2px rgba(#161616, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include focus(20px);
+  img {
+    pointer-events: none;
+    opacity: 0.8;
+    margin-right: 4px;
+  }
+}

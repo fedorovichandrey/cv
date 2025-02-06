@@ -1,0 +1,29 @@
+@import "../../assets/styles/entry.scss";
+
+.title {
+  @include h2();
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 90px);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin-top: 15px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+  }
+  span {
+    margin-top: 6px;
+    display: block;
+    font-size: 14px;
+  }
+}

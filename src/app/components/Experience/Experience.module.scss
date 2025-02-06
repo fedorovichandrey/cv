@@ -1,0 +1,60 @@
+@import "../../assets/styles/entry.scss";
+
+.sectionTitle {
+  @include h2();
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  b {
+    font-weight: 600;
+  }
+  a {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.place {
+  @include text();
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &:not(:first-child) {
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: var(--text-color);
+      transition: background-color $speed;
+      opacity: 0.1;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.period {
+  @include period();
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+
+  @include max-vw($md) {
+    display: none;
+  }
+}
+.locationText {
+  opacity: 0.6;
+}
+.locationFlag {
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+}
