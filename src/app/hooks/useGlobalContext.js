@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { storage } from '../helpers/utils.helper';
 
 const useGlobalContext = () => {
-  const [mode, setMode] = useState(storage('mode') || 'light');
+  const [mode, setMode] = useState('light');
 
   useEffect(() => {
     storage('mode', mode);

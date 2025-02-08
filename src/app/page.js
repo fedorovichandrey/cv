@@ -4,7 +4,7 @@ import useBodyClass from './hooks/useBodyClass';
 import useGlobalContext from './hooks/useGlobalContext';
 import { GlobalContext } from './context';
 import Stack from './components/Stack';
-import About from './components/About';
+import Summary from './components/Summary';
 import Contacts from './components/Contacts';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -24,7 +24,7 @@ const App = () => {
         <div className={s.wrap}>
           <PersonalInfo />
           <Contacts />
-          <About />
+          <Summary />
           <Stack />
           <Experience />
           <Projects />

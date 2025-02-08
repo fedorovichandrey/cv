@@ -18,7 +18,7 @@ const IconLink = ({
     <Image
       width={width}
       height={height}
-      src={image}
+      src={`./${image}`}
       alt={alt}
     />
   </Link>

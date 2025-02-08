@@ -32,7 +32,7 @@ const Switcher = () => {
             <Image
               width={24}
               height={24}
-              src={idx === 0 ? '/IconSun.svg' : '/IconMoon.svg'}
+              src={idx === 0 ? './IconSun.svg' : './IconMoon.svg'}
               alt='Theme Switcher'
             />
           </span>

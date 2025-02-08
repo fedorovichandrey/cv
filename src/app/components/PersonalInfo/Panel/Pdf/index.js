@@ -7,14 +7,14 @@ import Image from 'next/image';
 
 const Pdf = () => (
   <a
-    href='/Andrey_Fedorovich_-_Software_Developer.pdf'
+    href='./Andrey_Fedorovich_-_Software_Developer.pdf'
     download='Andrey_Fedorovich_-_Software_Developer.pdf'
     className={s.wrap}
   >
     <Image
       width={16}
       height={16}
-      src="/download.svg"
+      src="./download.svg"
       alt={iconAlt}
     />
     <span className={s.hint}>{cvExtension}</span>

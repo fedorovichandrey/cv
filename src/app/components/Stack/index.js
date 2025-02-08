@@ -11,7 +11,7 @@ const Stack = () => (
           <Image
             width={50}
             height={50}
-            src={`/stack/${image}`}
+            src={`./stack/${image}`}
             loading="lazy"
             alt={value}
           />
