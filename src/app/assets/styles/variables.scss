@@ -26,25 +26,3 @@ $xxl: 1600px;
 $ui-height-s: 34px;
 $ui-height-m: 38px;
 $ui-height-l: 42px;
-
-body {
-  --bg: #f3f4f5;
-  --text-color: #31373d;
-  --btn-color: #31373d;
-  --filter-to-white: invert(0);
-
-  transition: background-color $speed, color $speed;
-  background-color: var(--bg);
-  color: var(--text-color);
-}
-
-.dark {
-  --bg: #161616;
-  --text-color: #f3f4f5;
-  --btn-color: #f3f4f5;
-  --filter-to-white: invert(100%);
-  @media print {
-    --text-color: #161616;
-    --btn-color: #161616;
-  }
-}

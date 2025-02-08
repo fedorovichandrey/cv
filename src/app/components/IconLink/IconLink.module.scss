@@ -9,12 +9,14 @@
   justify-content: center;
   opacity: 0.7;
   transition: opacity $speed;
+
   img {
     transition: filter $speed;
 
     filter: var(--filter-to-white);
     width: 24px;
   }
+
   &:hover {
     opacity: 1;
   }

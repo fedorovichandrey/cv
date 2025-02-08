@@ -1,25 +1,27 @@
-import React, { memo } from 'react';
-import PropTypes from 'prop-types';
+import Link from 'next/link';
+import Image from 'next/image';
 import s from './IconLink.module.scss';
 
 const IconLink = ({
-  url, image, alt, ...props
+  url,
+  image,
+  alt,
+  width,
+  height,
 }) => (
-  <a
+  <Link
     className={s.icon}
     href={url}
     target="_blank"
     rel="noreferrer noopener"
-    {...props}
   >
-    <img src={image} alt={alt} />
-  </a>
+    <Image
+      width={width}
+      height={height}
+      src={image}
+      alt={alt}
+    />
+  </Link>
 );
 
-IconLink.propTypes = {
-  alt: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-};
-
-export default memo(IconLink);
+export default IconLink;

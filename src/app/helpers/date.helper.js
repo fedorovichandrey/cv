@@ -30,9 +30,9 @@ export const getEnd = (endMonth, endYear, isCurrent) => {
 
 export const getPeriod = (start, end = new Date()) => {
   if (!start
-     || isAfter(start, end)
-     || !isValid(start)
-     || !isValid(end)
+    || isAfter(start, end)
+    || !isValid(start)
+    || !isValid(end)
   ) return null;
 
   return formatDistance(start, end);

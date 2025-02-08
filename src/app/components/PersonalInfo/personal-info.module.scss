@@ -42,6 +42,8 @@
 .location {
   margin-left: 4px;
   margin-right: 4px;
+  display: flex;
+  gap: 6px;
   @include text();
   @include max-vw($sm) {
     margin-left: 0;

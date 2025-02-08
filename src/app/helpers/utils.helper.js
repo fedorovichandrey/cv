@@ -1,7 +1,6 @@
 export const storage = (key, data) => {
-  if (!data) {
-    return JSON.parse(localStorage.getItem(key));
-  }
+  if (!data) return JSON.parse(localStorage.getItem(key));
+
   localStorage.setItem(key, JSON.stringify(data));
   return null;
 };
@@ -49,4 +48,5 @@ export const isObjectsDeepEqual = (a, b) => {
   return result;
 };
 
-export const isEmptyObject = (obj) => obj && Object.keys(obj).length === 0 && obj.constructor === Object;
+export const isEmptyObject = obj =>
+  obj && Object.keys(obj).length === 0 && obj.constructor === Object;
