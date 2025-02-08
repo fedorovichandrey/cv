@@ -1,12 +1,12 @@
 {
-  "name": "cv-build",
+  "name": "cv",
   "version": "0.1.0",
+  "homepage": "https://fedorovichandrey.github.io/cv",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
