@@ -1,6 +1,7 @@
 {
-  "name": "cv-build",
+  "name": "cv",
   "version": "0.1.0",
+  "homepage": "https://fedorovichandrey.github.io/cv",
   "private": true,
   "scripts": {
     "dev": "next dev",
