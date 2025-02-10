@@ -8,7 +8,6 @@ const Switcher = () => {
   const options = ['light', 'dark'];
   const { setMode, mode } = useContext(GlobalContext);
 
-
   const onSwitch = event => {
     event.target.blur();
 

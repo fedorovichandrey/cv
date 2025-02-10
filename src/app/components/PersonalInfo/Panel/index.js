@@ -1,11 +1,22 @@
 import React, { memo } from 'react';
 import Switch from './Switch';
-import Pdf from './Pdf';
+import DocLoader from './DocLoader';
 import s from './Panel.module.scss';
 
 const Panel = () => (
   <div className={s.panel}>
-    <Pdf />
+    <DocLoader
+      href="./Andrey_Fedorovich_-_Software_Developer.pdf"
+      download="Andrey_Fedorovich_-_Software_Developer.pdf"
+      alt="download pdf"
+      extension=".PDF"
+    />
+    <DocLoader
+      href="./Andrey_Fedorovich_-_Software_Developer.docx"
+      download="Andrey_Fedorovich_-_Software_Developer.docx"
+      alt="download docx"
+      extension=".DOCX"
+    />
     <Switch />
   </div>
 );
