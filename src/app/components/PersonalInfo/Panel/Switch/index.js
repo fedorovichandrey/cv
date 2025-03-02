@@ -5,7 +5,6 @@ import styles from './switch.module.scss';
 
 
 const Switcher = () => {
-  const options = ['light', 'dark'];
   const { setMode, mode } = useContext(GlobalContext);
 
   const onSwitch = event => {
@@ -14,29 +13,31 @@ const Switcher = () => {
     setMode(mode === 'light' ? 'dark' : 'light');
   };
 
-  const sliderClass = mode === 'light' ? styles.sliderLight : styles.sliderDark;
+
+
+  const modeClass = mode === 'light' ? styles.light : styles.dark;
 
   return (
     <button
       onClick={onSwitch}
-      className={styles.root}
+      className={`${styles.root} ${modeClass}`}
     >
-      <span className={`${styles.slider} ${sliderClass}`} />
-      <span className={styles.options}>
-        {options.map((title, idx) => (
-          <span
-            className={styles.option}
-            key={title}
-          >
-            <Image
-              width={24}
-              height={24}
-              src={idx === 0 ? './IconSun.svg' : './IconMoon.svg'}
-              alt='Theme Switcher'
-            />
-          </span>
-        ))}
-      </span>
+      <span className={styles.slider} />
+      {mode === 'light' ?
+        <Image
+          className={styles.icon}
+          width={16}
+          height={16}
+          src='./IconMoon.svg'
+          alt='Theme Switcher'
+        /> : <Image
+          className={styles.icon}
+          width={16}
+          height={16}
+          src={'./IconSun.svg'}
+          alt='Theme Switcher'
+        />
+      }
     </button>
   );
 };

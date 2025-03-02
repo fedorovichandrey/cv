@@ -8,7 +8,6 @@ const useGlobalContext = () => {
     storage('mode', mode);
   }, [mode]);
 
-
   return {
     mode,
     setMode,

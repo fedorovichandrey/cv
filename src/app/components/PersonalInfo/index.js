@@ -12,7 +12,7 @@ const PersonalInfo = () => (
       </div>
     </div>
     <div className={s.posLine}>
-      <h3 className={s.position}>Software Developer</h3>
+      <p className={s.position}>Software Developer</p>
       <p className={s.location}>
         <span className={s.separator}>-</span>
         <span className={s.locationContent}>Kraków, Poland</span>

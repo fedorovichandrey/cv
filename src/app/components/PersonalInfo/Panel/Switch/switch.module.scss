@@ -1,23 +1,28 @@
 @import "../../../../assets/styles/entry.scss";
 
-@mixin switch-wrap() {
-  display: inline-flex;
-  margin: 0 auto;
-  padding: 3px;
+.light {
+  .slider {
+    right: calc(100% - 28px);
+  }
+  .icon {
+    right: 4px;
+  }
+}
+
+.root {
+  display: flex;
+  gap: 4px;
+  width: 52px;
+  height: 30px;
+  align-items: center;
   border-radius: 20px;
   border: 0;
-  background-color: $gray;
   box-shadow: 0px 1px 2px rgba(black, 0.3);
   cursor: pointer;
   @include focus(20px);
+
   @include max-vw($xs + 10) {
     margin: 0;
-  }
-}
-.options {
-  display: inline-flex;
-  img {
-    opacity: 0.8;
   }
 }
 
@@ -27,50 +32,17 @@
   background-color: $white;
   position: absolute;
   border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   transition: right $speed;
   z-index: 1;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-.sliderDark {
   right: 4px;
 }
 
-.sliderLight {
-  right: calc(100% - 28px);
-}
-
-.option {
-  height: 24px;
-  min-width: 24px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  border: 0;
-  background-color: transparent;
-  position: relative;
-  white-space: nowrap;
-
-  &:not(:last-child) {
-    margin-right: 4px;
-  }
-  img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    max-width: 16px;
-    height: 16px;
-  }
-}
-
-.root {
-  @include switch-wrap();
-
-  .option {
-    height: 24px;
-  }
+.icon {
+  position: absolute;
+  right: calc(100% - 20px);
+  transition: right $speed;
 }

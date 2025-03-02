@@ -51,7 +51,7 @@
 }
 
 .key {
-  opacity: 0.6;
+  color: rgb(88, 88, 88);
 
   @include max-vw($md) {
     @include h3(600);

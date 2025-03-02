@@ -9,8 +9,8 @@ const Social = () => (
       <IconLink
         key={title}
         image={image}
-        width={30}
-        height={30}
+        width={24}
+        height={24}
         url={url}
         alt={title}
       />
